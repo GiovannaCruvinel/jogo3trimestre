@@ -146,6 +146,9 @@ public class PlayerCtrl : MonoBehaviour {
 		case "Coin":
 			AudioManager.instance.PlayCoinPickupSound(other.gameObject);
 			SFXManager.instance.ShowCoinParticles(other.gameObject);
+
+                Jujuba j = other.gameObject.GetComponent<Jujuba>();
+
 			GM.instance.IncrementCoinCount();
 			Destroy(other.gameObject);
 			break;
